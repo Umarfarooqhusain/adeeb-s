@@ -1,0 +1,136 @@
+// $breakpoint-md: 768px;
+// $breakpoint-lg: 1200px;
+
+// .header {
+//   background-color: rgba(255, 255, 255, 0.933);
+//   height: 10%;
+//   width: 100%;
+//   position: absolute;
+//   z-index: 1;
+//   a {
+//     text-decoration: none;
+//     color: hsl(0, 0%, 0%);
+//     font-size: 20px;
+//   }
+//   nav {
+//     display: none;
+//     height: 10px;
+//     width: 100%;
+//     ul {
+//       margin-left: 6em;
+//       margin-top: 1vh;
+//     }
+//   }
+
+//   img {
+//     float: right;
+//     padding: 20px;
+//   }
+
+//   @media screen and (min-width: $breakpoint-md) {
+//     nav {
+//       display: block;
+//       ul {
+//         margin-right: 8rem;
+//         display: flex;
+//         list-style: none;
+//         gap: 25px;
+//         padding: 20px;
+//       }
+//     }
+//     img {
+//       display: none;
+//     }
+//   }
+// }
+$breakpoint-md: 768px;
+$breakpoint-lg: 1200px;
+
+.header {
+  background-color: rgba(255, 255, 255, 0.933);
+  height: 10%;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
+
+  a {
+    text-decoration: none;
+    color: #005f5f;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  nav {
+    display: none; // Hidden by default for mobile
+    height: 10px;
+    width: 100%;
+
+    ul {
+      margin-left: 6em;
+      margin-top: 1vh;
+    }
+  }
+
+  img {
+    float: right;
+    padding: 20px;
+    cursor: pointer;
+  }
+
+  /* Sidebar styles */
+  .sidebar {
+    position: fixed;
+    top: 80px;
+    right: -300px; // Hidden by default
+    width: 250px;
+    height: 100%;
+    background-color: #fffefeef;
+    transition: right 0.3s ease;
+    padding: 20px;
+    z-index: 1000;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+
+      li {
+        margin-bottom: 30px;
+
+        a {
+          color: rgb(17, 0, 0);
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  /* Sidebar open state */
+  .sidebar.open {
+    right: 0; // Slide-in when open
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    nav {
+      display: block; // Show the nav on larger screens
+
+      ul {
+        margin-right: 8rem;
+        display: flex;
+        list-style: none;
+        gap: 25px;
+        padding: 20px;
+      }
+    }
+
+    img {
+      display: none; // Hide the hamburger icon on larger screens
+    }
+
+    .sidebar {
+      display: none; // Hide the sidebar on larger screens
+    }
+  }
+}

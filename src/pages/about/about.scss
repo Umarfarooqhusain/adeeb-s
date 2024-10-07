@@ -1,0 +1,37 @@
+.about {
+  padding-top: 84px;
+  margin-bottom: 50px;
+  .section {
+    background-color: white;
+    width: 92%;
+    margin: auto;
+    padding-top: 50px;
+    .main {
+      padding: 20px;
+      h1 {
+        color: #005f5f;
+        font-size: 50px;
+      }
+      h2 {
+        font-size: 30px;
+        padding-top: 30px;
+        color: #005f5f;
+      }
+      p {
+        font-size: 20px;
+        color: #4a536e;
+        padding-top: 15px;
+        line-height: 21px;
+      }
+      strong {
+        padding: 10px;
+        color: #4a536e;
+      }
+    }
+  }
+  @media screen and (min-width: 1130px) {
+    .section {
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  flex-direction: column;
+
+  .card {
+    width: 340px;
+    height: 300px;
+    border: 1px solid rgb(158, 158, 158);
+    margin-top: 20px;
+    border-radius: 2px;
+    a {
+      text-decoration: none !important;
+    }
+  }
+  @media screen and (min-width: 1130px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
