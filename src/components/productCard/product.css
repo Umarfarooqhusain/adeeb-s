@@ -10,9 +10,13 @@
 .container .card {
   width: 340px;
   height: 300px;
-  border: 1px solid rgb(158, 158, 158);
+  border: 1px solid #005f5f;
   margin-top: 20px;
-  border-radius: 2px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+.container .card img {
+  border-radius: 15px;
 }
 .container .card a {
   text-decoration: none !important;

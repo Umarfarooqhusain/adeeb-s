@@ -7,6 +7,9 @@
   /* Sidebar styles */
   /* Sidebar open state */
 }
+.header .logo {
+  font-size: 1000px;
+}
 .header a {
   text-decoration: none;
   color: #005f5f;
@@ -22,14 +25,16 @@
   margin-left: 6em;
   margin-top: 1vh;
 }
-.header img {
+.header .hamburger-icon {
   float: right;
   padding: 20px;
   cursor: pointer;
+  background: none;
+  border: none;
 }
 .header .sidebar {
   position: fixed;
-  top: 80px;
+  top: 68px;
   right: -300px;
   width: 250px;
   height: 100%;
@@ -59,6 +64,10 @@
   .header nav {
     display: block;
   }
+  .header nav .logo {
+    font-size: 1000px;
+    position: absolute;
+  }
   .header nav ul {
     margin-right: 8rem;
     display: flex;
@@ -66,7 +75,7 @@
     gap: 25px;
     padding: 20px;
   }
-  .header img {
+  .header button {
     display: none;
   }
   .header .sidebar {

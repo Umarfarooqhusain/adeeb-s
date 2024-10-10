@@ -4,31 +4,34 @@ import imageUrlBuilder from "@sanity/image-url";
 import client from "../../sanityClient";
 import "./product.css";
 
-// Initialize the image URL builder
 const builder = imageUrlBuilder(client);
 
-// Function to generate the image URL
 function urlFor(source) {
   return source ? builder.image(source).url() : "";
 }
 
 const ProductCard = ({ product }) => {
-  console.log(product);
-  // Access the first image directly from the product object
   const imageSource = product.images?.[0]?.asset;
 
   return (
-    <Link to={`/product/${product._id}`}>
+    <Link
+      to={`/product/${product._id}`}
+      className="product-link"
+      aria-label={`View details of ${product.name || "product"}`}
+    >
       <div className="container">
-        <div className="card">
+        <figure className="card">
           <img
             src={
               imageSource ? urlFor(imageSource) : "path/to/fallback/image.jpg"
             }
-            alt={product.name}
+            alt={
+              product.name ? `Image of ${product.name}` : "Image not available"
+            }
             className="product-image"
+            loading="lazy"
           />
-        </div>
+        </figure>
         <h1>{product.name || "Product Name Not Available"}</h1>
       </div>
     </Link>

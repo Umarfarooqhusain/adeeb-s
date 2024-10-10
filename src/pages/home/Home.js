@@ -5,16 +5,16 @@ import ProductCard from "../../components/productCard/ProductCard";
 import hero from "../../assets/images/hero.jpg";
 import imageUrlBuilder from "@sanity/image-url";
 
-// Initialize the image URL builder
 const builder = imageUrlBuilder(client);
 
-// Function to generate the image URL
 function urlFor(source) {
   return source ? builder.image(source).url() : "";
 }
 
 const Home = () => {
   const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,8 +32,11 @@ const Home = () => {
       }
     `);
         setProducts(productsData);
+        setIsLoading(false);
       } catch (error) {
         console.error("Error fetching data:", error);
+        setError("Failed to load products. Please try again later.");
+        setIsLoading(false);
       }
     };
 
@@ -57,14 +60,18 @@ const Home = () => {
             and necklaces. Additionally, they produce specialized items like
             horn mugs, furniture, and copper water bottles. The company is
             dedicated to maintaining high standards of quality, ensuring their
-            products enjoy a strong international reputation.{" "}
+            products enjoy a strong international reputation.
           </p>
         </div>
       </div>
 
       <div>
         <div className="cards">
-          {products.length > 0 ? (
+          {isLoading ? (
+            <p>Loading products...</p>
+          ) : error ? (
+            <p className="error-message">{error}</p>
+          ) : products.length > 0 ? (
             products.map((product) => (
               <ProductCard key={product._id} product={product} />
             ))

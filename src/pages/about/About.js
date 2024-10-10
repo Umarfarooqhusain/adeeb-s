@@ -3,8 +3,8 @@ import "./about.css";
 const About = () => {
   return (
     <div className="about">
-      <div className="section">
-        <div className="main">
+      <section className="section">
+        <article className="main">
           <h1>A Culture Of Thinkers & Makers</h1>
           <p>
             NOVEL ARTISANS is a renowned manufacturer and exporter of
@@ -90,8 +90,8 @@ const About = () => {
             customer satisfaction, which influences every aspect of our
             operations.
           </p>
-        </div>
-      </div>
+        </article>
+      </section>
     </div>
   );
 };

@@ -1,1 +1,83 @@
-/*# sourceMappingURL=contact.css.map */
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f9f9f9;
+  padding: 20px;
+}
+.contact-container .contact-form {
+  background-color: #fff;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease-in-out;
+}
+.contact-container .contact-form:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+.contact-container .contact-form h1 {
+  color: #005f5f;
+  padding-bottom: 30px;
+}
+.contact-container .contact-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #005f5f;
+}
+.contact-container .contact-form .form-group {
+  margin-bottom: 20px;
+  width: 94%;
+}
+.contact-container .contact-form .form-group label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #333;
+}
+.contact-container .contact-form .form-group input[type=text],
+.contact-container .contact-form .form-group input[type=email],
+.contact-container .contact-form .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  color: #333;
+  transition: border-color 0.3s;
+}
+.contact-container .contact-form .form-group input[type=text]:focus,
+.contact-container .contact-form .form-group input[type=email]:focus,
+.contact-container .contact-form .form-group textarea:focus {
+  border-color: #005f5f;
+}
+.contact-container .contact-form .form-group textarea {
+  height: 100px;
+  resize: none;
+}
+.contact-container .contact-form .submit-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #005f5f;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+.contact-container .contact-form .submit-btn:hover {
+  background-color: #004a4a;
+}
+
+@media screen and (max-width: 768px) {
+  .contact-container {
+    padding: 10px;
+  }
+  .contact-container .contact-form {
+    padding: 20px;
+  }
+}/*# sourceMappingURL=contact.css.map */
