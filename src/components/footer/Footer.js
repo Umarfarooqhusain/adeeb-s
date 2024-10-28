@@ -31,16 +31,9 @@ const Footer = () => {
         >
           <i className="fab fa-instagram"></i>
         </a>
+
         <a
-          href="https://www.linkedin.com/company/104133247/admin/dashboard/"
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label="Connect with us on LinkedIn"
-        >
-          <i className="fab fa-linkedin"></i>
-        </a>
-        <a
-          href="https://www.facebook.com/profile.php?id=61565640508084"
+          href="https://www.facebook.com/adeeb.hameed.963"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Like us on Facebook"
